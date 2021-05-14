@@ -1,0 +1,11 @@
+pika==1.1.0
+pyzmq==19.0.1
+numpy
+opencv-python
+random2
+pybase64
+pip
+Pillow==2.2.2 
+scikit-learn
+Flask==0.10.1
+requests

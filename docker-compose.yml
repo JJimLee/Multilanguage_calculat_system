@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  nginx:
+    container_name: nginx
+    image: webdevops/php-nginx:7.4-alpine
+    ports:
+     - "8081:80"
+    volumes:
+     - "./nginx-conf/:/opt/docker/etc/nginx/conf.d/"
+     - "./nginx-conf/vhost.conf:/opt/docker/etc/nginx/vhost.conf"
+     - "./webroot/:/var/www/webroot/"
+
+  python:
+   build:
+     context: .
+     dockerfile: python.Dockerfile
+
+  go:
+   build:
+     context: .
+     dockerfile: go.Dockerfile
+
+  
